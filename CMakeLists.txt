@@ -13,16 +13,18 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Charts)
 qt_standard_project_setup()
 
 qt_add_executable(Airport_inspector
-    main.cpp
-    database.h
-    database.cpp
-    mainwindow.ui
-    mainwindow.h
-    mainwindow.cpp
-    statsdialog.ui
-    statsdialog.h
-    statsdialog.cpp
+    src/main.cpp
+    src/database.h
+    src/database.cpp
+    src/mainwindow.ui
+    src/mainwindow.h
+    src/mainwindow.cpp
+    src/statsdialog.ui
+    src/statsdialog.h
+    src/statsdialog.cpp
 )
+
+target_include_directories(Airport_inspector PRIVATE src)
 
 target_link_libraries(Airport_inspector PRIVATE
     Qt6::Widgets

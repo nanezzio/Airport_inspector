@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>920</width><height>620</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Инспектор аэропортов</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelAirport">
+        <property name="text"><string>Аэропорт:</string></property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="airportCombo">
+        <property name="minimumSize">
+         <size><width>320</width><height>0</height></size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelDirection">
+        <property name="text"><string>Направление:</string></property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="directionLayout">
+        <item>
+         <widget class="QRadioButton" name="departureRadio">
+          <property name="text"><string>Вылет</string></property>
+          <property name="checked"><bool>true</bool></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="arrivalRadio">
+          <property name="text"><string>Прилёт</string></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelDate">
+        <property name="text"><string>Дата:</string></property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="calendarPopup"><bool>true</bool></property>
+        <property name="displayFormat"><string>dd.MM.yyyy</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonsLayout">
+      <item>
+       <widget class="QPushButton" name="searchButton">
+        <property name="text"><string>Показать рейсы</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="statsButton">
+        <property name="text"><string>Загруженность аэропорта</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+        <property name="sizeHint" stdset="0">
+         <size><width>40</width><height>20</height></size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="table">
+      <column><property name="text"><string>Номер рейса</string></property></column>
+      <column><property name="text"><string>Время</string></property></column>
+      <column><property name="text"><string>Аэропорт</string></property></column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <widget class="QMenu" name="menuFile">
+    <property name="title"><string>Файл</string></property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title"><string>Справка</string></property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text"><string>Выход</string></property>
+  </action>
+  <action name="actionAbout">
+   <property name="text"><string>О программе</string></property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

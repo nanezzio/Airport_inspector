@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatsDialog</class>
+ <widget class="QDialog" name="StatsDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>820</width><height>620</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Загруженность аэропорта</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text"><string>Аэропорт:</string></property>
+     <property name="styleSheet">
+      <string notr="true">font-size:15px; font-weight:bold; padding:6px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabs">
+     <property name="currentIndex"><number>0</number></property>
+     <widget class="QWidget" name="yearTab">
+      <attribute name="title"><string>За год</string></attribute>
+      <layout class="QVBoxLayout" name="yearLayout">
+       <item>
+        <widget class="QWidget" name="yearChartPlaceholder" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="monthTab">
+      <attribute name="title"><string>За месяц</string></attribute>
+      <layout class="QVBoxLayout" name="monthLayout">
+       <item>
+        <layout class="QHBoxLayout" name="monthSelectLayout">
+         <item>
+          <widget class="QLabel" name="labelMonth">
+           <property name="text"><string>Месяц:</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="monthCombo"/>
+         </item>
+         <item>
+          <spacer name="spacerMonth">
+           <property name="orientation"><enum>Qt::Horizontal</enum></property>
+           <property name="sizeHint" stdset="0">
+            <size><width>40</width><height>20</height></size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QWidget" name="monthChartPlaceholder" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="closeLayout">
+     <item>
+      <spacer name="spacerClose">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text"><string>Закрыть</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
